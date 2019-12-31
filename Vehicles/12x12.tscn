@@ -25,6 +25,7 @@ steering_speed_decay = 0.0
 center_steering = false
 
 [node name="Wheels" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="L1" type="Sprite" parent="Wheels"]
 position = Vector2( -95, -202.5 )
