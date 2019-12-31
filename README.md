@@ -1,4 +1,4 @@
-# godot-wheeled-vehicle-system
+# Godot Wheeled Vehicle System
 
 
 This repository contains file to allow making arbitrary wheeled vehicles in the Godot game engine. The base concept is to simulate each wheel individually, which makes it possible to make a wide variaty vehicle with this, regardless of the amount of wheel or the steering.

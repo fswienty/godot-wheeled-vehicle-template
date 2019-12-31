@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Vehicles/Vehicle.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Vehicles/wheel.png" type="Texture" id=2]
+[ext_resource path="res://Vehicles/Wheel.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Vehicles/forklift.png" type="Texture" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25.1146, 65.4892 )
+
+[node name="Forklift" type="RigidBody2D"]
+physics_material_override = SubResource( 1 )
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+grip = 10.0
+steering_speed = 0.02
+steering_speed_decay = 0.0
+center_steering = false
+
+[node name="Wheels" type="Node2D" parent="."]
+
+[node name="FL" type="Sprite" parent="Wheels"]
+position = Vector2( -25, -9 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+power = 1.0
+
+[node name="FR" type="Sprite" parent="Wheels"]
+position = Vector2( 25, -9 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+power = 1.0
+
+[node name="R" type="Sprite" parent="Wheels"]
+position = Vector2( 0, 51 )
+scale = Vector2( 0.9, 0.7 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = -50.0
+
+[node name="Body" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+scale = Vector2( 0.5, 0.6 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -9.26 )
+z_index = 2
+shape = SubResource( 2 )

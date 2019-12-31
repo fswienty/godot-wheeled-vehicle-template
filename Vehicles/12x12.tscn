@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Vehicles/Vehicle.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Vehicles/wheel.png" type="Texture" id=2]
+[ext_resource path="res://Vehicles/Wheel.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Vehicles/12x12.png" type="Texture" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 115.932, 251.068 )
+
+[node name="12x12" type="RigidBody2D"]
+mass = 10.0
+physics_material_override = SubResource( 1 )
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+grip = 10.0
+steering_speed = 0.03
+steering_speed_decay = 0.0
+center_steering = false
+
+[node name="Wheels" type="Node2D" parent="."]
+
+[node name="L1" type="Sprite" parent="Wheels"]
+position = Vector2( -95, -202.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 40.0
+power = 3.0
+
+[node name="R1" type="Sprite" parent="Wheels"]
+position = Vector2( 95, -202.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 40.0
+power = 3.0
+
+[node name="L2" type="Sprite" parent="Wheels"]
+position = Vector2( -95, -130 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 30.0
+power = 3.0
+
+[node name="R2" type="Sprite" parent="Wheels"]
+position = Vector2( 95, -130 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 30.0
+power = 3.0
+
+[node name="L3" type="Sprite" parent="Wheels"]
+position = Vector2( -95, -58.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 20.0
+power = 3.0
+
+[node name="R3" type="Sprite" parent="Wheels"]
+position = Vector2( 95, -58.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 20.0
+power = 3.0
+
+[node name="L4" type="Sprite" parent="Wheels"]
+position = Vector2( -95, 58.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+power = 3.0
+
+[node name="R4" type="Sprite" parent="Wheels"]
+position = Vector2( 95, 58.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+power = 3.0
+
+[node name="L5" type="Sprite" parent="Wheels"]
+position = Vector2( -95, 130 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = -10.0
+power = 3.0
+
+[node name="R5" type="Sprite" parent="Wheels"]
+position = Vector2( 95, 130 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = -10.0
+power = 3.0
+
+[node name="L6" type="Sprite" parent="Wheels"]
+position = Vector2( -95, 202.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = -20.0
+power = 3.0
+
+[node name="R6" type="Sprite" parent="Wheels"]
+position = Vector2( 95, 202.5 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = -20.0
+power = 3.0
+
+[node name="Body" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 1.081 )
+z_index = 2
+shape = SubResource( 2 )

@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Vehicles/Vehicle.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Vehicles/wheel.png" type="Texture" id=2]
+[ext_resource path="res://Vehicles/Wheel.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Vehicles/bike.png" type="Texture" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.9128
+height = 47.9231
+
+[node name="Bike" type="RigidBody2D"]
+mass = 0.5
+physics_material_override = SubResource( 1 )
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+grip = 2.0
+steering_speed_decay = 0.2
+
+[node name="Wheels" type="Node2D" parent="."]
+
+[node name="F" type="Sprite" parent="Wheels"]
+position = Vector2( 0, -24.743 )
+scale = Vector2( 0.7, 0.8 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+is_steering = true
+max_angle = 25.0
+
+[node name="R" type="Sprite" parent="Wheels"]
+position = Vector2( 0, 23.94 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+power = 5.0
+
+[node name="Body" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+scale = Vector2( 0.727273, 0.727273 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
+shape = SubResource( 2 )
