@@ -6,7 +6,6 @@ export var steering_speed_decay = 0.1
 # true: steering wheels return to their forward position
 # false: steering wheels remain at their current angle
 export var center_steering = true
-export var air_resistance = 0.0
 onready var right = global_transform.x.normalized()
 onready var wheel_group = str(get_instance_id()) + "-wheels"  # unique name for the wheel group
 
@@ -53,7 +52,7 @@ func _physics_process(delta):
 	var vel = 0.005 * linear_velocity
 	var vSquared = vel.length_squared() * vel.normalized()
 #	apply_central_impulse(-cw_value * vSquared)
-	apply_central_impulse(-air_resistance * vel)
+	apply_central_impulse(-0.005 * vel)
 	
 
 

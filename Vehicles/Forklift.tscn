@@ -18,11 +18,10 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
-grip = 30.0
+grip = 10.0
 steering_speed = 0.02
 steering_speed_decay = 0.0
 center_steering = false
-air_resistance = 3.0
 
 [node name="Wheels" type="Node2D" parent="."]
 
