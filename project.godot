@@ -18,6 +18,12 @@ _global_script_class_icons={
 config/name="baddrivinggame"
 run/main_scene="res://World.tscn"
 
+[display]
+
+window/size/width=1929
+window/size/height=1080
+window/size/fullscreen=true
+
 [input]
 
 accelerate={

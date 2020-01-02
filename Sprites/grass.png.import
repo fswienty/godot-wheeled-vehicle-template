@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/racetrack2.png-1eb10bbce7dbbec390f3e262f899ca04.stex"
+path="res://.import/grass.png-11790cf4996b3e431ddcdfc0fd7a15ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/racetrack2.png"
-dest_files=[ "res://.import/racetrack2.png-1eb10bbce7dbbec390f3e262f899ca04.stex" ]
+source_file="res://Sprites/grass.png"
+dest_files=[ "res://.import/grass.png-11790cf4996b3e431ddcdfc0fd7a15ea.stex" ]
 
 [params]
 
