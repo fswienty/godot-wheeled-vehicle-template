@@ -1,15 +1,15 @@
 extends Sprite
 
-onready var player: RigidBody2D # set by Player.gd, until then just some temporary rigidbody so that the script doesn't shit itself
+onready var vehicle: RigidBody2D # set by Vehicle.gd, until then just some temporary rigidbody so that the script doesn't shit itself
 
 # steering variables
 export var is_steering = false  # wether a wheel responds to steering input
 export var max_angle = 0.0  # maximum anngle the wheel can steer to
-var steering_speed = 0.0  # how fast the wheel steers, set by Player.gd
-var center_steering = true  # see explanation in Player.gd
+var steering_speed = 0.0  # how fast the wheel steers, set by Vehicle.gd
+var center_steering = true  # see explanation in Vehicle.gd
 
 export var power = 0.0  # how much a wheel responds to drive input
-var grip = 0.0  # grip of the tire, set by Player.gd
+var grip = 0.0  # grip of the tire, set by Vehicle.gd
 
 onready var forward = -global_transform.y.normalized()
 onready var right = global_transform.x.normalized()
@@ -23,7 +23,7 @@ func _process(delta):
 	# update direction unit vectors and position vector relative to body
 	forward = -(global_transform.y.normalized())
 	right = global_transform.x.normalized()
-	player_to_wheel = global_position - player.global_position
+	player_to_wheel = global_position - vehicle.global_position
 
 
 func _physics_process(delta):
@@ -42,10 +42,10 @@ func steer(steering_input):
 
 
 func drive(drive_input):
-	player.apply_impulse(player_to_wheel, drive_input * power * forward)
+	vehicle.apply_impulse(player_to_wheel, drive_input * power * forward)
 
 
 func apply_lateral_forces():
 	var lateral_velocity = linear_velocity.dot(right)
-	player.apply_impulse(player_to_wheel, -(grip * lateral_velocity * right))
+	vehicle.apply_impulse(player_to_wheel, -(grip * lateral_velocity * right))
 

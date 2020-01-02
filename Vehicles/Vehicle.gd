@@ -6,6 +6,7 @@ export var steering_speed_decay = 0.1
 # true: steering wheels return to their forward position
 # false: steering wheels remain at their current angle
 export var center_steering = true
+export var air_resistance = 0.1
 onready var right = global_transform.x.normalized()
 onready var wheel_group = str(get_instance_id()) + "-wheels"  # unique name for the wheel group
 
@@ -15,9 +16,9 @@ func _ready():
 	var wheels = get_node("Wheels").get_children()
 	for wheel in wheels:
 		wheel.add_to_group(wheel_group)
-	
+
 	# tire setup
-	get_tree().set_group(wheel_group, "player", self)
+	get_tree().set_group(wheel_group, "vehicle", self)
 	get_tree().set_group(wheel_group, "grip", grip)
 	get_tree().set_group(wheel_group, "steering_speed", steering_speed)
 	get_tree().set_group(wheel_group, "center_steering", center_steering)
@@ -50,10 +51,9 @@ func _physics_process(delta):
 	
 	# "air resistance"
 	var vel = 0.005 * linear_velocity
-	var vSquared = vel.length_squared() * vel.normalized()
-#	apply_central_impulse(-cw_value * vSquared)
-	apply_central_impulse(-0.005 * vel)
-	
-
+	apply_central_impulse(-air_resistance * vel)
+	# air resistance *should* scale quadratically with velssssocity but whatever
+#	var velSquared = vel.length_squared() * vel.normalized()
+#	apply_central_impulse(-air_resistance * velSquared)
 
 

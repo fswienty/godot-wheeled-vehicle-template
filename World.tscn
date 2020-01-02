@@ -5,12 +5,9 @@
 
 [node name="World" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Track" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
-
-[node name="Truck" parent="." instance=ExtResource( 2 )]
-steering_speed_decay = 0.3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -22,3 +19,6 @@ drag_margin_left = 0.0
 drag_margin_top = 0.0
 drag_margin_right = 0.0
 drag_margin_bottom = 0.0
+
+[node name="Truck" parent="." instance=ExtResource( 2 )]
+position = Vector2( 441.073, 281.355 )
