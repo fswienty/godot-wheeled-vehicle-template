@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Sprites/racetrack2.png" type="Texture" id=1]
-[ext_resource path="res://Vehicles/Truck.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Objects/barrel_red.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Objects/barrel_red_down.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Objects/cone_straight.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Objects/barrel_blue.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Objects/rock3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Objects/oil.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Objects/tree_large.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Objects/tree_small.png" type="Texture" id=9]
+[ext_resource path="res://Vehicles/Car.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Vehicles/Forklift.tscn" type="PackedScene" id=11]
 
 [node name="World" type="Node2D"]
 
@@ -9,16 +18,116 @@
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 
+[node name="Objects" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 8.59183, -5.72791 )
+
+[node name="barrel_red" type="Sprite" parent="Objects"]
+position = Vector2( 715.547, 976.7 )
+texture = ExtResource( 2 )
+
+[node name="barrel_red_down" type="Sprite" parent="Objects"]
+position = Vector2( 618.173, 1184.34 )
+texture = ExtResource( 3 )
+
+[node name="cone_straight" type="Sprite" parent="Objects"]
+position = Vector2( -72.0374, 807.728 )
+texture = ExtResource( 4 )
+
+[node name="barrel_blue" type="Sprite" parent="Objects"]
+position = Vector2( 849.473, 1181.68 )
+texture = ExtResource( 5 )
+
+[node name="rock3" type="Sprite" parent="Objects"]
+position = Vector2( 1211.01, 1102.71 )
+texture = ExtResource( 6 )
+
+[node name="oil" type="Sprite" parent="Objects"]
+position = Vector2( 897.208, 1452.8 )
+texture = ExtResource( 7 )
+
+[node name="tree_large" type="Sprite" parent="Objects"]
+position = Vector2( -767.238, 1141.14 )
+texture = ExtResource( 8 )
+
+[node name="tree_small" type="Sprite" parent="Objects"]
+position = Vector2( 1095.85, 918.533 )
+texture = ExtResource( 9 )
+
+[node name="tree_large2" type="Sprite" parent="Objects"]
+position = Vector2( -1782.68, 359.208 )
+texture = ExtResource( 8 )
+
+[node name="tree_large3" type="Sprite" parent="Objects"]
+position = Vector2( -820.856, -531.971 )
+texture = ExtResource( 8 )
+
+[node name="tree_large4" type="Sprite" parent="Objects"]
+position = Vector2( 738.706, -146.156 )
+texture = ExtResource( 8 )
+
+[node name="tree_small2" type="Sprite" parent="Objects"]
+position = Vector2( 298.551, 272.264 )
+texture = ExtResource( 9 )
+
+[node name="tree_small3" type="Sprite" parent="Objects"]
+position = Vector2( 119.229, 326.604 )
+texture = ExtResource( 9 )
+
+[node name="tree_large5" type="Sprite" parent="Objects"]
+position = Vector2( 1548.37, -1390.55 )
+texture = ExtResource( 8 )
+
+[node name="tree_small4" type="Sprite" parent="Objects"]
+position = Vector2( -967.575, -1374.24 )
+texture = ExtResource( 9 )
+
+[node name="cone_straight2" type="Sprite" parent="Objects"]
+position = Vector2( -72.6497, 941.309 )
+texture = ExtResource( 4 )
+
+[node name="cone_straight3" type="Sprite" parent="Objects"]
+position = Vector2( -74.0817, 1067.32 )
+texture = ExtResource( 4 )
+
+[node name="cone_straight4" type="Sprite" parent="Objects"]
+position = Vector2( -78.3776, 1184.74 )
+texture = ExtResource( 4 )
+
+[node name="cone_straight5" type="Sprite" parent="Objects"]
+position = Vector2( -8.21094, 1068.76 )
+texture = ExtResource( 4 )
+
+[node name="cone_straight6" type="Sprite" parent="Objects"]
+position = Vector2( -9.64288, 1184.74 )
+texture = ExtResource( 4 )
+
+[node name="cone_straight7" type="Sprite" parent="Objects"]
+position = Vector2( 46.204, 1127.47 )
+texture = ExtResource( 4 )
+
+[node name="barrel_red2" type="Sprite" parent="Objects"]
+position = Vector2( 513.027, 1093.1 )
+texture = ExtResource( 2 )
+
+[node name="barrel_blue2" type="Sprite" parent="Objects"]
+position = Vector2( 389.877, 700.738 )
+texture = ExtResource( 5 )
+
+[node name="Car" parent="." instance=ExtResource( 10 )]
+
+[node name="Forklift" parent="." instance=ExtResource( 11 )]
+position = Vector2( 224.06, 1039.74 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 224.06, 1039.74 )
 current = true
 zoom = Vector2( 2, 2 )
 process_mode = 0
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
+smoothing_speed = 20.0
 drag_margin_left = 0.0
 drag_margin_top = 0.0
 drag_margin_right = 0.0
 drag_margin_bottom = 0.0
-
-[node name="Truck" parent="." instance=ExtResource( 2 )]
-position = Vector2( 441.073, 281.355 )
