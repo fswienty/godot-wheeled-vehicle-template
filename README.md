@@ -1,4 +1,4 @@
-# Godot Wheeled Vehicle Template
+![Alt text](/Icons/thumbnail_wide.png)
 
 This repository contains files to allow making arbitrary 2D wheeled vehicles in the Godot game engine. The basic concept is to simulate each wheel individually, which makes it possible to make a wide variaty vehicle with this, regardless of the amount of wheels or the steering.
 
