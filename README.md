@@ -1,6 +1,6 @@
 ![Alt text](/Icons/thumbnail_wide.png)
 
-This repository contains files to allow making arbitrary 2D wheeled vehicles in the Godot game engine. The basic concept is to simulate each wheel individually, which makes it possible to make a wide variaty vehicle with this, regardless of the amount of wheels or the steering.
+This repository contains files to allow making arbitrary 2D wheeled vehicles in the Godot game engine. The basic concept is to simulate each wheel individually, which makes it possible to make a wide variety vehicles with this, regardless of the amount of wheels or the steering.
 
 The repository contains a couple example vehicles: a simple car, a motorbike, a truck with four-wheel-steering, a forklift with rear wheel steering, and the chassis of a crane with 12 wheels, 10 of which steer.
 
