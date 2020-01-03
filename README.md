@@ -5,11 +5,11 @@ This repository contains files to allow making arbitrary 2D wheeled vehicles in 
 The repository contains a couple example vehicles: a simple car, a motorbike, a truck with four-wheel-steering, a forklift with rear wheel steering, and the chassis of a crane with 12 wheels, 10 of which steer.
 
 #### Structure
-Vehicles are build like this:
+Vehicles are structured like this:
 
 - Rigidbody2D (with Vehicle.gd)
 	- Node2D (named "Wheels")
-		- [several wheels] (all with Wheel.gd)
+		- [several Sprite2Ds] (all with Wheel.gd)
 	- Sprite2D (vehicle body texture)
 	- CollisionShape2D
 	
