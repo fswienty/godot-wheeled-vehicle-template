@@ -10,7 +10,7 @@ Vehicles are build like this:
 - Rigidbody2D (with Vehicle.gd)
 	- Node2D (named "Wheels")
 		- [several wheels] (all with Wheel.gd)
-	- Sprite2D with vehicle body texture
+	- Sprite2D (vehicle body texture)
 	- CollisionShape2D
 	
 #### Vehicle.gd
