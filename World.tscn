@@ -118,8 +118,7 @@ position = Vector2( 389.877, 700.738 )
 texture = ExtResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 348.198, 976.049 )
-rotating = true
+position = Vector2( 1.82727, 851.151 )
 current = true
 zoom = Vector2( 2, 2 )
 process_mode = 0
@@ -132,4 +131,5 @@ drag_margin_right = 0.0
 drag_margin_bottom = 0.0
 
 [node name="Truck" parent="." instance=ExtResource( 11 )]
-position = Vector2( 765.054, 1539.92 )
+position = Vector2( 560.441, 1602.62 )
+rotation = 5.75958
