@@ -35,3 +35,11 @@ Power: How much force the wheel exerts when it is given drive input
 
 
 #### You are free to use this for whatever you want, but I would be happy to hear about it if you make something cool out if this!
+
+
+#### Possible improvements
+- Proper Ackermann steering
+- Use something like an animated texture to make it look like a wheel is turning?
+- Doriftoooo: 
+	- Add logic that automatically tries to catch a drift
+	- Make tire grip decrease when tires start sliding instead of rolling
