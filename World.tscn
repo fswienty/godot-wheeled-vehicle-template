@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/grass.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/racetrack.png" type="Texture" id=2]
@@ -11,8 +11,10 @@
 [ext_resource path="res://Sprites/Objects/tree_large.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Objects/tree_small.png" type="Texture" id=10]
 [ext_resource path="res://Vehicles/Truck.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World.gd" type="Script" id=12]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 12 )
 
 [node name="Grass" type="Sprite" parent="."]
 scale = Vector2( 10, 10 )
@@ -23,7 +25,6 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
 [node name="Objects" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="barrel_red" type="Sprite" parent="Objects"]
 position = Vector2( 715.547, 976.7 )
@@ -122,8 +123,6 @@ position = Vector2( 1.82727, 851.151 )
 current = true
 zoom = Vector2( 2, 2 )
 process_mode = 0
-drag_margin_h_enabled = false
-drag_margin_v_enabled = false
 smoothing_speed = 20.0
 drag_margin_left = 0.0
 drag_margin_top = 0.0
