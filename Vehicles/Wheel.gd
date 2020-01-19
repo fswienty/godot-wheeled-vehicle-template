@@ -19,14 +19,14 @@ onready var last_position = global_position
 onready var linear_velocity = global_position - last_position
 
 
-func _process(delta):
+func _process(_delta):
 	# update direction unit vectors and position vector relative to body
 	forward = -(global_transform.y.normalized())
 	right = global_transform.x.normalized()
 	player_to_wheel = global_position - vehicle.global_position
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# get approximate velocity vector
 	linear_velocity = global_position - last_position
 	last_position = global_position

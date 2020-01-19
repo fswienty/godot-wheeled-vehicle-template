@@ -24,11 +24,11 @@ func _ready():
 	get_tree().set_group(wheel_group, "center_steering", center_steering)
 
 
-func _process(delta):
+func _process(_delta):
 	right = global_transform.x.normalized()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# acceleration input
 	var drive_input = 0
 	if Input.is_action_pressed("accelerate"):

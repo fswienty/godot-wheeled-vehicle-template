@@ -71,3 +71,7 @@ texture = ExtResource( 4 )
 position = Vector2( 0, 1.081 )
 z_index = 2
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
